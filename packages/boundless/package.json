@@ -14,6 +14,7 @@
   "dependencies": {
     "@opencode/core": "workspace:*",
     "@opencode/plugin": "workspace:*",
+    "@opencode/util": "workspace:*",
     "@opentui/core": "catalog:",
     "@opentui/solid": "catalog:",
     "effect": "catalog:",

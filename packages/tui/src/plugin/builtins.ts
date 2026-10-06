@@ -1,3 +1,4 @@
+import BoundlessAccount from "@boundless/code/tui"
 import HomeFooter from "../feature-plugins/home/footer"
 import PromptBtw from "../feature-plugins/prompt/btw"
 import PromptFooter from "../feature-plugins/prompt/footer"
@@ -13,6 +14,7 @@ import Latex from "@opencode/latex/plugin"
 import Merman from "@opencode/merman/plugin"
 
 export const builtins = [
+  BoundlessAccount,
   HomeFooter,
   PromptFooter,
   PromptBtw,

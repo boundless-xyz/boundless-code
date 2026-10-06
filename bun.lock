@@ -115,6 +115,7 @@
       "dependencies": {
         "@opencode/core": "workspace:*",
         "@opencode/plugin": "workspace:*",
+        "@opencode/util": "workspace:*",
         "@opentui/core": "catalog:",
         "@opentui/solid": "catalog:",
         "effect": "catalog:",
@@ -951,6 +952,7 @@
       "name": "@opencode/tui",
       "version": "2.0.24",
       "dependencies": {
+        "@boundless/code": "workspace:*",
         "@opencode/client": "workspace:*",
         "@opencode/core": "workspace:*",
         "@opencode/latex": "workspace:*",

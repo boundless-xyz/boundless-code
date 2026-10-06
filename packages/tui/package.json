@@ -52,6 +52,7 @@
     "@opencode/core": "workspace:*",
     "@opencode/latex": "workspace:*",
     "@opencode/merman": "workspace:*",
+    "@boundless/code": "workspace:*",
     "@opencode/plugin": "workspace:*",
     "@opencode/schema": "workspace:*",
     "@opencode/simulation": "workspace:*",
