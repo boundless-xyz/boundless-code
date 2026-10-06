@@ -108,6 +108,7 @@
     "@opencode-ai/pty": "0.2.0",
     "@opencode/ai": "workspace:*",
     "@opencode/codemode": "workspace:*",
+    "@boundless/code": "workspace:*",
     "@opencode/plugin": "workspace:*",
     "@opencode/plugin-browser": "workspace:*",
     "@opencode/schema": "workspace:*",

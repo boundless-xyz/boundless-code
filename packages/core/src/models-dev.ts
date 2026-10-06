@@ -28,7 +28,7 @@ type Cost = {
 
 type Modality = "text" | "audio" | "image" | "video" | "pdf"
 
-type SourceModel = {
+export type SourceModel = {
   readonly id: string
   readonly name: string
   readonly family?: string
@@ -67,7 +67,7 @@ type SourceModel = {
   }
 }
 
-type SourceProvider = {
+export type SourceProvider = {
   readonly api?: string
   readonly name: string
   readonly env: readonly string[]
@@ -93,7 +93,7 @@ function nativePackage(provider: SourceProvider, model?: SourceModel) {
   )
 }
 
-function normalize(input: Record<string, SourceProvider>): readonly Snapshot[] {
+export function normalize(input: Record<string, SourceProvider>): readonly Snapshot[] {
   const providers: Snapshot[] = []
   for (const item of Object.values(input)) {
     const providerID = Provider.ID.make(item.id)
