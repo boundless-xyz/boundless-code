@@ -7,3 +7,5 @@ Upstream: anomalyco/opencode. Base tag: v1.18.34.
 |---|---|---|
 | packages/opencode/src/plugin/index.ts | import + register `BoundlessPlugin` first in `internalPlugins` | Boundless sign-in and provider ship built in |
 | packages/opencode/package.json | `@boundless/code` workspace dependency | resolve the plugin |
+| packages/tui/src/feature-plugins/builtins.ts | import + register `BoundlessTui` first | balance, sign-in and sign-out ship built in |
+| packages/tui/package.json | `@boundless/code` workspace dependency | resolve the TUI plugin |
