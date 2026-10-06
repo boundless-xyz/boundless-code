@@ -13,8 +13,10 @@ export async function signIn(api: SignInApi, deps: { open: (url: string) => void
     const started = await api.client.provider.oauth.authorize({ providerID: "boundless", method: 0 })
     const url = started.data?.url
     if (started.error || !url) return failed("Boundless sign-in is unavailable right now. Try /signin later.")
-    deps.open(url)
     api.ui.toast({ message: `Approve the sign-in in your browser: ${url}`, variant: "info" })
+    try {
+      deps.open(url)
+    } catch {}
     const finished = await api.client.provider.oauth.callback({ providerID: "boundless", method: 0 })
     if (finished.error) return failed("Sign-in did not complete. Run /signin to try again.")
     await deps.refresh()

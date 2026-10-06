@@ -58,4 +58,18 @@ describe("signIn", () => {
     await signIn(api as any, { open: () => {}, refresh: async () => {} })
     expect(toasts.at(-1)?.variant).toBe("error")
   })
+
+  test("a machine with no browser still shows the URL and completes sign-in", async () => {
+    let refreshed = 0
+    const { api, calls, toasts } = fakeApi({})
+    await signIn(api as any, {
+      open: () => {
+        throw new Error("spawn xdg-open ENOENT")
+      },
+      refresh: async () => void refreshed++,
+    })
+    expect(toasts.some((toast) => toast.message.includes("https://console/authorize?x"))).toBe(true)
+    expect(calls).toEqual(["authorize", "callback"])
+    expect(refreshed).toBe(1)
+  })
 })
